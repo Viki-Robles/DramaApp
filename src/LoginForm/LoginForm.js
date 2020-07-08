@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import "./LoginForm.css";
+import FormUserDetails from "../FormUserDetails/FormUserDetails";
 
 export default class LoginForm extends Component {
     constructor(props) {
@@ -32,27 +33,40 @@ export default class LoginForm extends Component {
 
     render() {
         const { firstName, lastName, email } = this.state;
-        return (
-            <div>
-                <h2>Login Details</h2>
-                <form>
-                    <input
-                        type="text" required
-                        placeholder="FirstName"
-                        value={this.state.value}
-                        onChange={this.state.handleChange} />
-                    <input
-                        type="text" required
-                        placeholder="LastName"
-                        value={this.state.value}
-                        onChange={this.state.handleChange} />
-                    <input
-                        type="email" required
-                        placeholder="Email"
-                        value={this.state.value}
-                        onChange={this.state.handleChange} />
-                </form>
-            </div>
-        );
+        const { step } = this.state;
+
+        switch (step) {
+            case 1:
+                return (
+                    <div className="loginForm-container">
+                        <h2>Login Details</h2>
+                        <form>
+                            <input
+                                type="text" required
+                                placeholder="FirstName"
+                                value={this.state.value}
+                                onChange={this.state.handleChange} />
+                            <input
+                                type="text" required
+                                placeholder="LastName"
+                                value={this.state.value}
+                                onChange={this.state.handleChange} />
+                            <input
+                                type="email" required
+                                placeholder="Email"
+                                value={this.state.value}
+                                onChange={this.state.handleChange} />
+                        </form>
+                        <button className="loginForm-button">Next</button>
+                    </div>
+                )
+
+            case 2:
+                return <FormUserDetails />
+            case 3:
+                return <div>Add the calendar</div>
+            case 4:
+                return <div>Confirm Booking</div>
+        }
     }
 }

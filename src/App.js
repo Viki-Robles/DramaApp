@@ -5,8 +5,8 @@ import LoginForm from "./LoginForm/LoginForm";
 function App() {
   return (
     <div className="App">
-      <h2>DramaApp</h2>
-      <LoginForm/>
+      <header>Stepping Stones Drama</header>
+      <LoginForm />
     </div>
   );
 }
