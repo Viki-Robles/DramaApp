@@ -12,14 +12,12 @@ export default class LoginForm extends Component {
             email: ''
         };
     }
-
     //Go Back to next step
 
     nextStep = () => {
         const { step } = this.state;
         this.setState({ step: step + 1 });
     }
-
     //Go Back to previous step
 
     prevStep = () => {
@@ -57,12 +55,14 @@ export default class LoginForm extends Component {
                                 value={this.state.value}
                                 onChange={this.state.handleChange} />
                         </form>
-                        <button className="loginForm-button">Next</button>
+                        <button className="loginForm-button" onClick={this.nextStep}>Next</button>
                     </div>
                 )
 
             case 2:
-                return <FormUserDetails />
+                return <FormUserDetails
+                    nextStep={this.nextStep}
+                    handleChange={this.handleChange} />
             case 3:
                 return <div>Add the calendar</div>
             case 4:
