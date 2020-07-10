@@ -38,7 +38,7 @@ export default class LoginForm extends Component {
             case 1:
                 return (
                     <div className="loginForm-container">
-                        <h2>Login Details</h2>
+                        <h2>Sign in</h2>
                         <form>
                             <input
                                 type="text" required
