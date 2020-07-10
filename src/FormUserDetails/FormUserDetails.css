@@ -1,3 +1,7 @@
 .formUserDetails-container {
     display: grid;
 }
+
+.formControl {
+    display: flex;
+}
