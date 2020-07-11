@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./LoginForm.css";
 import FormUserDetails from "../FormUserDetails/FormUserDetails";
+import loginLogo from "./images/loginLogo2.png";
+import LockIcon from '@material-ui/icons/Lock';
 
 
 export default class LoginForm extends Component {
@@ -38,6 +40,7 @@ export default class LoginForm extends Component {
             case 1:
                 return (
                     <div className="loginForm-container">
+                        <img src={loginLogo} alt=""/>
                         <h2>Sign in</h2>
                         <form>
                             <input
@@ -52,12 +55,13 @@ export default class LoginForm extends Component {
                                 onChange={this.state.handleChange} />
                             <input
                                 type="email" required
-                                placeholder="Email"
+                                placeholder="Email Address"
                                 value={this.state.value}
                                 onChange={this.state.handleChange} />
                         </form>
                         <button className="loginForm-button" onClick={this.nextStep}>Next</button>
                     </div>
+                    
                 )
 
             case 2:
@@ -71,3 +75,6 @@ export default class LoginForm extends Component {
         }
     }
 }
+
+/**   <LockIcon fontSize="large" mr={20} color="green"/>
+ */

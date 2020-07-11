@@ -6,6 +6,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 
+
 const useStyles = makeStyles((theme) => ({
     button: {
         display: 'block',
@@ -42,7 +43,7 @@ export default function ControlledOpenSelect() {
 
         <div>
             <Button className={classes.button} onClick={handleOpen}>
-                Choose your level
+                Choose the type of class you want
             </Button>
             <FormControl className={classes.formControl}>
                 <InputLabel id="demo-controlled-open-select-label">Level</InputLabel>
@@ -58,12 +59,12 @@ export default function ControlledOpenSelect() {
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
-                    <MenuItem value={1}>One</MenuItem>
-                    <MenuItem value={2}>Two</MenuItem>
-                    <MenuItem value={3}>Three</MenuItem>
+                    <MenuItem value={1}>Tuition Class</MenuItem>
+                    <MenuItem value={2}>Exams Class</MenuItem>
                 </Select>
-                <button onClick={() => setStep(step + 1)}>Continue</button>
+                <button  className="formControl-button" onClick={() => setStep(step + 1)}>Continue</button>
             </FormControl>
+            
         </div>
         
     )
