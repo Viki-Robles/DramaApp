@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
+import "./FormUserDetails.css";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -39,41 +40,39 @@ export default function ControlledOpenSelect() {
 
     switch (step) {
         case 1:
-    return (
+            return (
 
-        <div>
-            <Button className={classes.button} onClick={handleOpen}>
-                Choose the type of class you want
-            </Button>
-            <FormControl className={classes.formControl}>
-                <InputLabel id="demo-controlled-open-select-label">Level</InputLabel>
-                <Select
-                    labelId="demo-controlled-open-select-label"
-                    id="demo-controlled-open-select"
-                    open={open}
-                    onClose={handleClose}
-                    onOpen={handleOpen}
-                    value={age}
-                    onChange={handleChange}
-                >
-                    <MenuItem value="">
-                        <em>None</em>
-                    </MenuItem>
-                    <MenuItem value={1}>Tuition Class</MenuItem>
-                    <MenuItem value={2}>Exams Class</MenuItem>
-                </Select>
-                <button  className="formControl-button" onClick={() => setStep(step + 1)}>Continue</button>
-            </FormControl>
-            
-        </div>
-        
-    )
-    case 2:
-        return <div>Hello there</div>
+                <div className="formControl-container">
+                    <h2 className="formControl-container-header">Choose the type of class you want</h2>
+                    <FormControl className={classes.formControl}>
+                        <InputLabel id="demo-controlled-open-select-label">Level</InputLabel>
+                        <Select
+                            labelId="demo-controlled-open-select-label"
+                            id="demo-controlled-open-select"
+                            open={open}
+                            onClose={handleClose}
+                            onOpen={handleOpen}
+                            value={age}
+                            onChange={handleChange}
+                        >
+                            <MenuItem value="">
+                                <em>None</em>
+                            </MenuItem>
+                            <MenuItem value={1}>Tuition Class</MenuItem>
+                            <MenuItem value={2}>Exams Class</MenuItem>
+                        </Select>
+                        <button className="formControl-button" onClick={() => setStep(step + 1)}>Continue</button>
+                    </FormControl>
+
+                </div>
+
+            )
+        case 2:
+            return <div>Hello there</div>
     }
 }
 
-/**  
+/**
 import React, { Component } from "react";
 import "./FormUserDetails.css";
 import LoginForm from "../LoginForm/LoginForm";

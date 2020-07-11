@@ -45,7 +45,7 @@ input {
 
 img {
   width:20%;
-  margin-left: 38%;
+  margin-left: 40%;
 }
 
 .loginForm-button, .formControl-button {
@@ -56,4 +56,7 @@ img {
   color:#2C46C4;
   font-weight: 600;
   background-color: white;
+  border: 3px solid #2C46C4;
+  border-radius: 10px;
+  font-size: 15px;
 }

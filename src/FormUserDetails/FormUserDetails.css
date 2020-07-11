@@ -5,3 +5,16 @@
 .formControl {
     display: flex;
 }
+
+.formControl-container {
+  background-color: #FFED86;
+  border: 6px solid #FFED86;
+  padding: 50px 0px 50px 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+
+.formControl-container-header {
+    padding-bottom: 40px;
+}
