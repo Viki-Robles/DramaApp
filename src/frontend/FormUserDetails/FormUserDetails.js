@@ -58,12 +58,11 @@ export default function ControlledOpenSelect() {
                             <MenuItem value="">
                                 <em>None</em>
                             </MenuItem>
-                            <MenuItem value={1}>Tuition Class</MenuItem>
+                            <MenuItem value={1} color={"2C46C4"}>Tuition Class</MenuItem>
                             <MenuItem value={2}>Exams Class</MenuItem>
                         </Select>
                         <button className="formControl-button" onClick={() => setStep(step + 1)}>Continue</button>
                     </FormControl>
-
                 </div>
 
             )

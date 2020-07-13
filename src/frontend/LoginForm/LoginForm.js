@@ -42,7 +42,7 @@ export default class LoginForm extends Component {
                     <div className="loginForm-container">
                         <img src={loginLogo} alt=""/>
                         <h2>Sign in</h2>
-                        <form>
+                        <form onSubmit={(e) => this.handleSubmit(e)}>
                             <input
                                 type="text" required
                                 placeholder="FirstName"
@@ -58,6 +58,7 @@ export default class LoginForm extends Component {
                                 placeholder="Email Address"
                                 value={this.state.value}
                                 onChange={this.state.handleChange} />
+                                <input type="submit"></input>
                         </form>
                         <button className="loginForm-button" onClick={this.nextStep}>Next</button>
                     </div>

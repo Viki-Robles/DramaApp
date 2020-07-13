@@ -18,3 +18,7 @@
 .formControl-container-header {
     padding-bottom: 40px;
 }
+
+.MuiSelect-selectMenu {
+    color:#2C46C4;
+}
