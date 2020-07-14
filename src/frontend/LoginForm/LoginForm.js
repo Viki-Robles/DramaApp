@@ -10,7 +10,7 @@ export default class LoginForm extends Component {
         const firstName = document.getElementById('form_firstName').value
         const lastName = document.getElementById('form_lastName').value
         const email = document.getElementById('form_email').value
-        const postBody = { firstName, lastName, email }
+        const postBody = { firstName, email, lastName }
         console.log(postBody)
         fetch('/rest/storeUser', {
             method: 'post',
@@ -57,7 +57,7 @@ export default class LoginForm extends Component {
                     <div className="loginForm-container">
                         <img src={loginLogo} alt=""/>
                         <h2>Sign in</h2>
-                        <form onSubmit={(e) => this.handleSubmit(e)}>
+                        <form className="form" onSubmit={(e) => this.handleSubmit(e)}>
                             <input
                                 id="form_firstName"
                                 type="text" required

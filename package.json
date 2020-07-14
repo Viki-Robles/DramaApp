@@ -2,7 +2,7 @@
   "name": "drama",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -22,7 +22,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start-backend": "nodemon src/backend/app.js",
+    "start-backend": "node src/backend/server.js",
     "start-frontend": "PORT=3006 react-scripts start",
     "start-all": "npm-run-all -p start-frontend start-backend",
     "start": "react-scripts start",
