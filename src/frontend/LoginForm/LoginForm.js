@@ -10,7 +10,7 @@ export default class LoginForm extends Component {
         const firstName = document.getElementById('form_firstName').value
         const lastName = document.getElementById('form_lastName').value
         const email = document.getElementById('form_email').value
-        const postBody = { firstName, email, lastName }
+        const postBody = { firstName, lastName, email }
         console.log(postBody)
         fetch('/rest/storeUser', {
             method: 'post',

@@ -60,3 +60,20 @@ img {
   border-radius: 10px;
   font-size: 15px;
 }
+
+@media(min-width:600px) {
+  img {
+    width: 5%;
+    margin-left: 47%;
+  }
+
+  .loginForm-button, .formControl-button {
+    width: 10%;
+    margin-left: 45%;
+  }
+
+  .loginForm-container {
+    width: 50%;
+    margin-left:25%;
+  }
+}
