@@ -2,10 +2,26 @@ import React, { Component } from "react";
 import "./LoginForm.css";
 import FormUserDetails from "../FormUserDetails/FormUserDetails";
 import loginLogo from "./images/loginLogo2.png";
-import LockIcon from '@material-ui/icons/Lock';
-
 
 export default class LoginForm extends Component {
+
+    handleSubmit(event) {
+        event.preventDefault(event)
+        const firstName = document.getElementById('form_firstName').value
+        const lastName = document.getElementById('form_lastName').value
+        const email = document.getElementById('form_email').value
+        const postBody = { firstName, lastName, email }
+        console.log(postBody)
+        fetch('/rest/storeUser', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(postBody)
+        });
+    }
+
+
     constructor(props) {
         super(props);
         this.state = {
@@ -33,7 +49,6 @@ export default class LoginForm extends Component {
     }
 
     render() {
-        const { firstName, lastName, email } = this.state;
         const { step } = this.state;
 
         switch (step) {
@@ -44,16 +59,19 @@ export default class LoginForm extends Component {
                         <h2>Sign in</h2>
                         <form onSubmit={(e) => this.handleSubmit(e)}>
                             <input
+                                id="form_firstName"
                                 type="text" required
                                 placeholder="FirstName"
                                 value={this.state.value}
                                 onChange={this.state.handleChange} />
                             <input
+                                id="form_lastName"
                                 type="text" required
                                 placeholder="LastName"
                                 value={this.state.value}
                                 onChange={this.state.handleChange} />
                             <input
+                                id="form_email"
                                 type="email" required
                                 placeholder="Email Address"
                                 value={this.state.value}
