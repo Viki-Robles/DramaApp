@@ -22,3 +22,12 @@
 .MuiSelect-selectMenu {
     color:#2C46C4;
 }
+
+.MuiInputBase-root {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.MuiInputLabel-formControl {
+    left: 100px;
+}
