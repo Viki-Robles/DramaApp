@@ -16,7 +16,10 @@
     "googleapis": "^52.1.0",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
+    "mongodb": "^3.5.9",
+    "mysql": "^2.18.1",
     "react": "^16.13.1",
+    "react-calendar": "^3.1.0",
     "react-dom": "^16.13.1",
     "react-google-calendar-api": "^1.0.11",
     "react-scripts": "3.4.1"

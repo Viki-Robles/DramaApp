@@ -6,6 +6,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 import "./FormUserDetails.css";
+import Calendar from "../Calendar/Calendar";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -67,7 +68,7 @@ export default function ControlledOpenSelect() {
 
             )
         case 2:
-            return <div>Hello there</div>
+            return <Calendar/>
     }
 }
 
