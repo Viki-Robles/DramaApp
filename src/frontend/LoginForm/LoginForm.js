@@ -21,7 +21,6 @@ export default class LoginForm extends Component {
         });
     }
 
-
     constructor(props) {
         super(props);
         this.state = {
@@ -79,10 +78,8 @@ export default class LoginForm extends Component {
                                 <input type="submit"></input>
                         </form>
                         <button className="loginForm-button" onClick={this.nextStep}>Next</button>
-                    </div>
-                    
-                )
-
+                    </div>  
+                );
             case 2:
                 return <FormUserDetails
                     nextStep={this.nextStep}
@@ -94,6 +91,3 @@ export default class LoginForm extends Component {
         }
     }
 }
-
-/**   <LockIcon fontSize="large" mr={20} color="green"/>
- */

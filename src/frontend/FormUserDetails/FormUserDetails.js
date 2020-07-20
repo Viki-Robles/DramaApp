@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
+import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
 import "./FormUserDetails.css";
 import Calendar from "../Calendar/Calendar";
 
-
 const useStyles = makeStyles((theme) => ({
     button: {
-        display: 'block',
+        display: "block",
         marginTop: theme.spacing(2),
     },
     formControl: {
@@ -42,7 +40,6 @@ export default function ControlledOpenSelect() {
     switch (step) {
         case 1:
             return (
-
                 <div className="formControl-container">
                     <h2 className="formControl-container-header">Choose the type of class you want</h2>
                     <FormControl className={classes.formControl}>
@@ -54,8 +51,7 @@ export default function ControlledOpenSelect() {
                             onClose={handleClose}
                             onOpen={handleOpen}
                             value={age}
-                            onChange={handleChange}
-                        >
+                            onChange={handleChange}>
                             <MenuItem value="">
                                 <em>None</em>
                             </MenuItem>
@@ -65,55 +61,8 @@ export default function ControlledOpenSelect() {
                         <button className="formControl-button" onClick={() => setStep(step + 1)}>Continue</button>
                     </FormControl>
                 </div>
-
-            )
+            );
         case 2:
-            return <Calendar/>
+            return <Calendar />
     }
 }
-
-/**
-import React, { Component } from "react";
-import "./FormUserDetails.css";
-import LoginForm from "../LoginForm/LoginForm";
-
-
-export default class FormUserDetails extends Component {
-    constructor() {
-        super();
-        this.state = {
-            step: 1
-        };
-    }
-
-    nextStep = () => {
-        const { step } = this.state;
-        this.setState({ step: step + 1 });
-    }
-    //Go Back to previous step
-
-    prevStep = () => {
-        const { step } = this.state;
-        this.setState({ step: step - 1 });
-    }
-    render() {
-        const { step } = this.state;
-        switch (step) {
-            case 1:
-                return (
-                    <div className="formUserDetails-container">
-                        <label>Choose your level</label>
-                        <select className="levels" id="levels">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
-                        <button className="loginForm-button" onClick={this.nextStep}>Next</button>
-                    </div>
-                )
-            case 2:
-                return <div>Hello</div>
-
-        }
-    }
-} */

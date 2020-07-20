@@ -9,4 +9,9 @@ body {
   margin-left: 25%;
 }
 
+@media(min-width:600px) {
+  .header {
+    margin-left: 35%;
 
+  }
+}

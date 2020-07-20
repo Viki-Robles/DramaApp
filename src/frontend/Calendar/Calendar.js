@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
-import './Calendar.css';
+import React, { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import "./Calendar.css";
 
 
 export default function ReactCalendar() {
@@ -11,11 +11,10 @@ export default function ReactCalendar() {
         setDate(date);
     }
     return (
-        <div className="calendar"> 
+        <div className="calendar">
             <Calendar
                 onChange={onChange}
-                value={date}
-            />
+                value={date} />
         </div>
-    )
+    );
 }
